@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Smart IoT Bag</string>
     <string name="main_text">사용하기 전 *반드시* 설정 > 어플리케이션 > Smart IoT Bag > 권한 허용을 해주세요! </string>
-    <string name="main_text1">부경대 전자정보통신공학부 \n CML</string>
+    <string name="main_text1">CML</string>
 
 </resources>
