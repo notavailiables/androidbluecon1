@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:background="@drawable/main_background"
+
+    tools:context=".MainActivity"
+    android:weightSum="1">
+
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="300dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="30dp"
+        android:contentDescription="image_view_main"
+        android:src="@drawable/main_image"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/button1"
+        android:layout_width="320dp"
+        android:layout_height="160dp"
+        android:layout_gravity="center"
+        android:layout_margin="8dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="0dp"
+
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/instructionbutton"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/taeduri"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            android:elevation="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imagelist"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:srcCompat="@drawable/instructions"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="match_parent" />
+
+        <ImageButton
+            android:id="@+id/imageAlarm"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/taeduri"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageBluetooth"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/alarm_page"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/button2"
+        android:layout_width="320dp"
+        android:layout_height="134dp"
+        android:layout_gravity="center"
+        android:layout_margin="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="0.5"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageButton
+            android:id="@+id/imageBluetooth"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/taeduri"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/bluetooth_page"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="match_parent" />
+
+        <ImageButton
+            android:id="@+id/imagelist"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/taeduri"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/instructions"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/list_page"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/first_connect"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/before_pressed_button"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/appleb"
+            android:textStyle="bold|italic"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:fontFamily="@font/appleb"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+
+        <TextView
+            android:id="@+id/readbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:fontFamily="@font/godob"
+            android:textAlignment="center"
+            android:background="@drawable/blue_button_total"
+            android:text="Smart 가방의 MAC 주소는 **********입니다.\n 연결을 진행해주세요!" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <ListView
+            android:id="@+id/pairedlist"
+            android:background="@drawable/listview_round"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.76" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/inputpane"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/menu_background"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textcheck"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/white"
+            android:text="챙길 것이 생겼나요?"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/textcheck2"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="아래 탭에서 현재 물품을 확인하세요!"
+            android:textStyle="bold"
+            android:textSize="25sp"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="30dp" />
+
+        <TextView
+            android:id="@+id/input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginLeft="110dp"
+            android:text="현재 물품 현황"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor = "@color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="5dp"
+                android:layout_height="5dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginLeft="30dp"
+                android:background="@color/white">
+
+                <ImageView
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"/>
+
+                <Button
+                    android:id="@+id/save"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:onClick="OnClickHandler1"
+                    android:text="수동 등록"
+                    android:textColor="@color/black"
+                    android:background="@drawable/blue_button_total"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"/>
+
+                <Button
+                    android:id="@+id/refresh"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:text="전체 삭제"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:background="@drawable/blue_button_total"/>
+
+                <ImageView
+                    android:layout_width="5dp"
+                    android:layout_height="5dp" />
+
+                <Button
+                    android:id="@+id/Search"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="OnClickHandler2"
+                    android:text="검색하기"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:background="@drawable/blue_button_total"/>
+
+                <ImageView
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"/>
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/logcatcher"
+                android:layout_width="match_parent"
+                android:background="#FFFF99"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/search_on"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/background_search"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textint"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:text="내 가방 속에 무엇이 들었는지"
+            android:textSize="18sp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="확인해보세요!"
+            android:textStyle="bold"
+            android:textSize="23sp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/before_pressed_button">
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/search_image" />
+
+            <EditText
+                android:id="@+id/searcheditSearch"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:hint="검색어를 입력하세요."
+                android:inputType="text"
+                android:minHeight="48dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/recommend"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:text="추천 검색어:    교과서   피피티자료   공책"
+            android:textSize="15sp"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+
+        <ListView
+            android:id="@+id/searchlistView"
+            android:layout_width="match_parent"
+            android:background="#FFFF99"
+            android:textSize="15sp"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:divider="#999999"
+            android:dividerHeight="1dp" />
+    </LinearLayout>
+
+    <TextView
+
+        android:id="@+id/textView2"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:adjustViewBounds="true"
+        android:background="@color/white"
+        android:fontFamily="@font/appleb"
+        android:text="@string/main_text"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:visibility="visible" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="3dp" />
+    <TextView
+
+        android:id="@+id/textView3"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:adjustViewBounds="true"
+        android:background="@color/white"
+        android:fontFamily="@font/appleb"
+        android:text="@string/main_text1"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:visibility="visible" />
+
+</LinearLayout>
